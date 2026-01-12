@@ -9,10 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run Tourism:serve-ssr",
-    "serve:ssr:Tourism": "node dist/Tourism/server/server.mjs",
-    "predeploy": "ng build --configuration production --base-href /TripAxis_Website/",
-    "deploy": "gh-pages -d dist/TripAxis_Website"
-
+    "serve:ssr:Tourism": "node dist/Tourism/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
