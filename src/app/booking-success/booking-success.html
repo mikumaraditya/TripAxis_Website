@@ -1,0 +1,43 @@
+<div class="success-container">
+  <div class="success-card">
+    
+    <div *ngIf="isLoading" class="loading-container">
+      <i class="fas fa-spinner fa-spin"></i>
+      <h2>Loading Booking Details...</h2>
+      <p>Please wait a moment.</p>
+    </div>
+
+    <div *ngIf="!isLoading && error" class="error-container">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h2>Error</h2>
+      <p>{{ error }}</p>
+      <a routerLink="/" class="home-button">Go to Homepage</a>
+    </div>
+
+    <ng-container *ngIf="!isLoading && !error && bookingDetails">
+      <i class="fas fa-check-circle"></i>
+      <h2>Booking Confirmed!</h2>
+      
+      <p>Thank you, <strong class="customer-name">{{ bookingDetails.fullName }}</strong>. Your payment was successful and your trip is confirmed.</p>
+      
+      <div class="booking-details-wrapper">
+        <h3>Your Booking: {{ bookingDetails.item }}</h3>
+        <p><strong>ID:</strong> {{ bookingDetails.bookingId }}</p>
+        <p><strong>Phone:</strong> {{ bookingDetails.phoneNumber }}</p> 
+        <p><strong>Start Date:</strong> {{ bookingDetails.travelDate | date:'fullDate' }}</p> 
+        <p *ngIf="bookingDetails.endDate">
+          <strong>End Date:</strong> {{ bookingDetails.endDate | date:'fullDate' }}
+        </p>
+        <p><strong>Travelers:</strong> {{ bookingDetails.travelers }}</p>
+        <p class="total-amount"><strong>Amount Paid:</strong> {{ bookingDetails.amount | currency:'INR':'symbol-narrow':'1.0-0' }}</p>
+      </div>
+
+      <button (click)="downloadPdf()" class="download-button">
+        <i class="fas fa-file-pdf"></i> Download Receipt (PDF)
+      </button>
+
+      <a routerLink="/" class="home-button">Go to Homepage</a>
+    </ng-container>
+
+  </div>
+</div>

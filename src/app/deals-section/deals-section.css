@@ -1,0 +1,150 @@
+/* ------------------ DEALS SECTION STYLES ------------------ */
+
+.deals-container {
+  padding: 3rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa; 
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.deal-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, rgba(1, 23, 50, 0.85) 0%, rgba(1, 23, 50, 0.7) 40%, rgba(1, 23, 50, 0) 70%), url('https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 3rem;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.9;
+}
+
+.deal-info {
+  max-width: 50%;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: #f7d046;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-wrapper .fa-tag {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.deal-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.deal-main-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+.discount {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.terms {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+
+/* ------------------ RESPONSIVENESS ------------------ */
+
+@media (max-width: 768px) {
+  .deals-container {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .deal-card {
+    padding: 2rem;
+    min-height: 300px;
+    background-image: linear-gradient(to right, rgba(1, 23, 50, 0.9) 0%, rgba(1, 23, 50, 0.8) 50%, rgba(1, 23, 50, 0.1) 100%), url('https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg');
+  }
+
+  .deal-info {
+    max-width: 80%;
+  }
+
+  .deal-subtitle, .deal-main-title {
+    font-size: 1.2rem;
+  }
+
+  .discount {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deal-card {
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  .deal-info {
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .discount {
+    font-size: 3.5rem;
+  }
+
+  .terms {
+    font-size: 0.7rem;
+  }
+}

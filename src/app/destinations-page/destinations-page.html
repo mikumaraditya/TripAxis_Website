@@ -1,0 +1,96 @@
+<div class="destinations-page-container">
+  <div class="destinations-page-header">
+    <h1 class="destinations-page-title">Explore Destinations</h1>
+    <p class="destinations-page-subtitle">Discover amazing places around the world</p>
+  </div>
+
+  <div class="controls-container">
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        (input)="searchDestinations()" 
+        placeholder="Search destinations or countries...">
+    </div>
+    
+    <div class="filters">
+      <select class="filter-select" [(ngModel)]="sortBy" (change)="onSortBy(sortBy)">
+        <option value="all">Sort by All</option>
+        <option value="name">Sort by Name</option>
+        <option value="price">Sort by Price</option>
+        <option value="rating">Sort by Rating</option>
+      </select>
+      
+      <select class="filter-select" [(ngModel)]="filterBy" (change)="filterByType(filterBy)">
+        <option value="all">All Types</option>
+        <option value="beach">Beach</option>
+        <option value="mountain">Mountain</option>
+        <option value="city">City</option>
+        <option value="cultural">Cultural</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Loading destinations...</p>
+  </div>
+
+  <div *ngIf="loadingError" class="error-container">
+    <i class="fas fa-exclamation-triangle"></i>
+    <h3>Oops! Something went wrong</h3>
+    <p>We couldn't load the destinations. Please try again later.</p>
+    <button class="retry-btn" (click)="loadDestinations()">Retry</button>
+  </div>
+
+  <!-- This div wraps both the grid and the "no results" message -->
+  <div *ngIf="!isLoading && !loadingError">
+    
+    <!-- Show the grid ONLY if there are destinations -->
+    <div *ngIf="filteredDestinations.length > 0" class="destinations-grid-full">
+      <div class="dest-card-full" *ngFor="let dest of filteredDestinations">
+        <div class="card-img-top">
+          <img [src]="dest.imageUrl" alt="Photo of {{ dest.name }}">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">{{ dest.name }}, {{ dest.country }}</h3>
+          <p class="card-text">{{ dest.description }}</p>
+          
+          <div class="card-meta">
+            <div class="card-meta-left">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <span>{{ dest.rating }}</span>
+              </div>
+              <div class="duration" *ngIf="dest.durationDays">
+                <i class="fas fa-clock"></i>
+                <span>{{ dest.durationDays }} Days</span>
+              </div>
+            </div>
+            
+            <div class="price" (click)="openBookingModal(dest)"> 
+              {{ dest.price | currency:'INR':'symbol-narrow':'1.0-0' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show this message ONLY if there are no destinations and it's not loading -->
+    <div *ngIf="filteredDestinations.length === 0" class="no-results-container">
+      <i class="fas fa-search-minus"></i>
+      <h3>No Destinations Found</h3>
+      <p>Try adjusting your search or filter criteria.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<app-booking-modal 
+  [isOpen]="isModalOpen" 
+  [item]="selectedDestination" 
+  (closeModal)="closeBookingModal()">
+</app-booking-modal>
+

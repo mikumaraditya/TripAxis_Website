@@ -1,0 +1,44 @@
+<header class="navbar" [class.navbar-solid]="isScrolled || !isHomePage">
+  
+  <div class="logo">
+    <a href="index.html"><i class="icon-logo">&#9992;</i> TripAxis</a>
+  </div>
+
+  
+  <nav class="nav-links" [class.open]="isMenuOpen">
+    
+    <button class="close-btn" (click)="toggleMenu()" aria-label="Close navigation">
+      &times;
+    </button>
+
+    <ul>
+      <li><a (click)="scrollTo('home')" [class.active]="activeSection === 'home'">Home</a></li>
+      <li><a (click)="scrollTo('destinations')" [class.active]="activeSection === 'destinations'">Popular Destinations</a></li>
+      <li><a (click)="scrollTo('packages')" [class.active]="activeSection === 'packages'">Our Packages</a></li>
+      <li><a (click)="scrollTo('about')" [class.active]="activeSection === 'about'">About us</a></li>
+      <li><a (click)="scrollTo('help')" [class.active]="activeSection === 'help'">Help</a></li>
+    </ul>
+  </nav>
+
+  
+  <div class="nav-right">
+    
+    <div *ngIf="isLoggedIn()" class="profile-menu" #profileMenu>
+      <button class="profile-btn" (click)="toggleProfileMenu()" aria-label="Profile menu">
+        <i class="fas fa-user-circle"></i>
+      </button>
+
+      <div class="profile-dropdown" *ngIf="isProfileMenuOpen">
+        <a (click)="logout()">Logout</a>
+      </div>
+    </div>
+    
+    <button *ngIf="!isLoggedIn()" class="login" routerLink="/login">
+      Get Started
+    </button>
+    
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+  </div>
+</header>

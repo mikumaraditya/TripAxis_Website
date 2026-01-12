@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Santorini",
+    "country": "Greece",
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=735&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Iconic blue-domed churches and stunning sunsets.",
+    "price": 19999,
+    "type": "Beach",
+    "durationDays": 7
+  },
+  {
+    "name": "Kyoto",
+    "country": "Japan",
+    "rating": 5.0,
+    "imageUrl": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop",
+    "description": "A city of ancient temples, beautiful gardens, and traditional geishas.",
+    "price": 22999,
+    "type": "City",
+    "durationDays": 9
+  },
+  {
+    "name": "Bora Bora",
+    "country": "French Polynesia",
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1652842183703-47c2f7bb8c3c?q=80&w=1332&auto=format=fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Famous for its luxurious overwater bungalows and crystal-clear turquoise waters.",
+    "price": 16999,
+    "type": "Beach",
+    "durationDays": 8
+  },
+  {
+    "name": "Rome",
+    "country": "Italy",
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop",
+    "description": "A city rich in history, with ancient ruins like the Colosseum and priceless art.",
+    "price": 14999,
+    "type": "City",
+    "durationDays": 5
+  },
+  {
+    "name": "Paris",
+    "country": "France",
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1609971757431-439cf7b4141b?q=80&w=687&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "The 'City of Love,' famous for its art, fashion, gastronomy, and culture.",
+    "price": 15999,
+    "type": "City",
+    "durationDays": 6
+  },
+  {
+    "name": "Fulhadhoo Beach",
+    "country": "Maldives",
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1974&auto=format&fit=crop",
+    "description": "Pristine white-sand beaches, vibrant coral reefs, and tranquil lagoons.",
+    "price": 12999,
+    "type": "Beach",
+    "durationDays": 4
+  },
+  {
+    "name": "Zermatt",
+    "country": "Switzerland",
+    "rating": 4.7,
+    "imageUrl": "https://media.gettyimages.com/id/1075663766/photo/gornergrat-railway-station-switzerland-in-winter.jpg?s=612x612&w=0&k=20&c=8TClluT9zcBgHr49K2avQEISTbv3Bdc1t9STZiYuI3o=",
+    "description": "A mountain village renowned for skiing, climbing and hiking, with the iconic Matterhorn peak.",
+    "price": 20999,
+    "type": "Mountain",
+    "durationDays": 8
+  },
+  {
+    "name": "New York City",
+    "country": "USA",
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=2070&auto=format&fit=crop",
+    "description": "The 'Big Apple,' a bustling metropolis with iconic landmarks and vibrant culture.",
+    "price": 24999,
+    "type": "City",
+    "durationDays": 10
+  },
+  {
+    "name": "Banff National Park",
+    "country": "Canada",
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2070&auto=format&fit=crop",
+    "description": "Canada's oldest national park, with stunning glacial lakes and majestic mountains.",
+    "price": 11999,
+    "type": "Mountain",
+    "durationDays": 5
+  },
+  {
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2070&auto=format&fit=crop",
+    "description": "Famous for its Carnival festival, Copacabana and Ipanema beaches, and Christ the Redeemer statue.",
+    "price": 13999,
+    "type": "Beach",
+    "durationDays": 6
+  },
+  {
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "rating": 5.0,
+    "imageUrl": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=2070&auto=format&fit=crop",
+    "description": "An Incan citadel set high in the Andes Mountains, known for its sophisticated dry-stone walls.",
+    "price": 18999,
+    "type": "Mountain",
+    "durationDays": 8
+  },
+  {
+    "name": "Dubai",
+    "country": "UAE",
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop",
+    "description": "A city of futuristic skyscrapers, luxury shopping, and vibrant nightlife.",
+    "price": 17999,
+    "type": "City",
+    "durationDays": 7
+  },
+  {
+    "name": "Varanasi",
+    "country": "India",
+    "rating": 4.8,
+    "imageUrl": "https://media.istockphoto.com/id/537988165/photo/varanasi.jpg?s=612x612&w=0&k=20&c=fFpEL17MiQJx5NkkNIVrTsesd2E8b04SCgzjfhUmQ7g=",
+    "description": "A spiritual city on the banks of the Ganges, famous for its ghats and ancient rituals.",
+    "price": 10999,
+    "type": "Cultural",
+    "durationDays": 5
+  },
+  {
+    "name": "Cairo",
+    "country": "Egypt",
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "description": "Home to the iconic Pyramids of Giza and the Sphinx, a gateway to ancient history.",
+    "price": 16999,
+    "type": "Cultural",
+    "durationDays": 6
+  },
+  {
+    "name": "Phuket",
+    "country": "Thailand",
+    "rating": 4.6,
+    "imageUrl": "https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/http://images.ntmllc.com/v4/destination/Thailand/Phuket-City/220668_SCN_Phuket_iStock910551026_Z20B18/Phuket-City-Scenery.jpg?tr=w-680%2Ch-404%2Cfo-auto",
+    "description": "Famous for its stunning beaches, vibrant nightlife, and clear blue waters.",
+    "price": 14999,
+    "type": "Beach",
+    "durationDays": 7
+  }
+]

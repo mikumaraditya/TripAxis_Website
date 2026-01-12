@@ -1,0 +1,33 @@
+<section id="packages" class="packages-container">
+  <div class="packages-content">
+    <div class="packages-header">
+      <h2 class="section-title">Popular Packages</h2>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card" *ngFor="let pkg of packages">
+        <div class="card-image">
+          <img [src]="pkg.imageUrl" [alt]="pkg.title" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3 class="package-title">{{ pkg.title }}</h3>
+          <p class="package-duration">{{ pkg.duration }}</p>
+          <div class="package-features">
+            <ul>
+              <li *ngFor="let feature of pkg.features">{{ feature }}</li>
+            </ul>
+          </div>
+          <div class="package-price-section">
+            <div class="price-display">{{ pkg.price | currency:'INR':'symbol-narrow':'1.0-0' }}</div>
+            <button class="book-now-btn" (click)="openBookingModal(pkg)">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-booking-modal 
+  [isOpen]="isModalOpen" 
+  [item]="selectedPackage" 
+  (closeModal)="closeBookingModal()">
+</app-booking-modal>

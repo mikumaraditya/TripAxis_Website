@@ -1,0 +1,29 @@
+<section id="help" class="help-container">
+  <div class="help-content">
+    <div class="help-header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Have questions? We're here to help. Find answers to common queries below.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item" *ngFor="let faq of faqs">
+        <details>
+          <summary class="faq-question">
+            <span>{{ faq.question }}</span>
+            <i class="fas fa-chevron-down"></i>
+          </summary>
+          <div class="faq-answer">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- <div class="contact-support">
+        <p>Can't find the answer you're looking for?</p>
+        <button class="cta-button">Contact Support</button>
+    </div> -->
+  </div>
+</section>

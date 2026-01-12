@@ -1,0 +1,14 @@
+<div 
+  class="notification-container" 
+  *ngIf="notification() as notif" 
+  [@state]>
+
+  <div class="notification" [class.success]="notif.type === 'success'" [class.error]="notif.type === 'error'">
+    
+    <i class="fas" [class.fa-check-circle]="notif.type === 'success'" [class.fa-exclamation-triangle]="notif.type === 'error'"></i>
+    
+    <p>{{ notif.message }}</p>
+
+    <button class="close-btn" (click)="hide()" aria-label="Close">&times;</button>
+  </div>
+</div>

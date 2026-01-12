@@ -1,0 +1,38 @@
+<div class="auth-container">
+    <div class="auth-card">
+      <h2 class="auth-title">Create an Account</h2>
+      <p class="auth-subtitle">Join TripAxis to start your adventure.</p>
+      
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="auth-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" formControlName="fullName" placeholder="John Doe">
+          <div *ngIf="signupForm.get('fullName')?.touched && signupForm.get('fullName')?.invalid" class="error-text">
+            Full name is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" placeholder="you@example.com">
+          <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid" class="error-text">
+            Please enter a valid email.
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" formControlName="password" placeholder="Minimum 8 characters">
+          <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid" class="error-text">
+            Password must be at least 8 characters long.
+          </div>
+        </div>
+        
+        <button type="submit" class="auth-button" [disabled]="signupForm.invalid">Create Account</button>
+      </form>
+      
+      <div class="auth-switch-link">
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
+      </div>
+    </div>
+  </div>

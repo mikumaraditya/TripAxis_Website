@@ -1,0 +1,31 @@
+<section id="destinations" class="destinations-container">
+  <div class="destinations-content">
+    <div class="destinations-header">
+      <h2 class="section-title">Popular Destinations</h2>
+    </div>
+    <div class="destinations-grid">
+      <div class="destination-card" *ngFor="let dest of destinations">
+        <img [src]="dest.imageUrl" alt="Photo of {{ dest.name }}" class="card-img">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <h3 class="destination-name">{{ dest.name }}, {{ dest.country }}</h3>
+          <div class="destination-meta">
+            <div class="destination-rating">
+              <i class="fas fa-star"></i>
+              <span>{{ dest.rating }}</span>
+            </div>
+            <span class="destination-price" (click)="openBookingModal(dest)" style="cursor: pointer;">
+              {{ dest.price | currency:'INR':'symbol-narrow':'1.0-0' }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-booking-modal 
+  [isOpen]="isModalOpen" 
+  [item]="selectedDestination" 
+  (closeModal)="closeBookingModal()">
+</app-booking-modal>
